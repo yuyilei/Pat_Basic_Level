@@ -1,13 +1,12 @@
 /*各位数统计*/
-
+/*不要输入大于int的数，否则会显示不出来！！！*/
 #include<stdio.h>
-#include<math.h>
 int main(){
    int  n , i ;
    int a[10] = {0} ;
-  // int *a = b ;
    printf("请输入一个整数\n") ;
    scanf("%d",&n);
+   printf("%d", n);
 
    while ( n> 0){
       switch ( n % 10){
