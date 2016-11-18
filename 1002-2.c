@@ -1,16 +1,18 @@
 #include<stdio.h>
 
 int main(){
-    int ch ;
+    char input[100] ;
     long sum = 0 ;
     int i =0 ;
     int j = 0; 
     char a[100]  ;
-    while ( ( ch = getchar()) != EOF ){
-        sum += ch;  
+    
+   scanf("%c",&input);
 
-    }
-
+   for ( i = 0; input[i] ; i ++){
+   
+       sum += a[i] ;
+   }
 
    for (  j= 0; sum > 0 ; j ++){
       
