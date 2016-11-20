@@ -14,7 +14,6 @@ int main(){
     int j ; /*用于循环*/
     int  n ; /*总人数*/
     int m ;  /*要获取信息的人数*/
-    int  k = 0 ; /*用于例遍数组*/
     int a[100] ;  /*用于存储考生的座位号*/
     struct Student students[1000];
 
