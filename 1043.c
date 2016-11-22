@@ -10,7 +10,7 @@ int main (){
 
     scanf("%s",a);
 
-    for ( i = 0 ; a[i] != NULL ; i++){
+    for ( i = 0 ; a[i] != '\0' ; i++){
     
         switch ( a[i]) {
         
@@ -35,7 +35,7 @@ int main (){
             case 5 : printf("t");  break ;         
         }
         a[i] = a[i] -1 ;
-            if ( i = 5 ,  a[0] != NULL || a[1] != NULL || a[2] != NULL || a[3] != NULL || a[4] != NULL || a[5] != NULL )
+            if ( i == 5 ,  a[0] != '\0' || a[1] != '\0' || a[2] != '\0' || a[3] != '\0' || a[4] != '\0' || a[5] != '\0' )
                 i = 0 ; 
     }
     return 0 ;
