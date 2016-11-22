@@ -34,7 +34,7 @@ int main (){
             case 4 : printf("s");  break ;
             case 5 : printf("t");  break ;         
         }
-        a[i] = a[i] -1 ;
+        n[i] = n[i] -1 ;
             if ( i == 5 ,  a[0] != '\0' || a[1] != '\0' || a[2] != '\0' || a[3] != '\0' || a[4] != '\0' || a[5] != '\0' )
                 i = 0 ; 
     }
