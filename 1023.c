@@ -12,11 +12,12 @@ int main (){
     for( i =0 ; i < 10 ; i++)
         scanf("%d",&a[i]);
 
-    for ( i = 1 ; a[i] != 0, i< 10; i++ ){
-    
+    for ( i = 1 ;  i< 10; i++ ){
+      if ( a[i] != 0){    /*不可将a[i] ！= 0 放入for循环内*/
         printf("%d",i);
         n = i ;
         break ;
+      }
     }        
 
     if ( a[0] != 0)
