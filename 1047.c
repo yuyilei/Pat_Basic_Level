@@ -5,10 +5,10 @@
 int main(){
 
     int  n ;
-    int  team[1000]   ;
-    int  member[1000]   ; 
-    int  score[1000]   ;
-    int  add[1000]  ;
+    int  team[10000]   ;
+    int  member[10000]   ; 
+    int  score[10000]   ;
+    int  add[10000]  ;
     int  i ; 
     int  j ;
     int  k ;
