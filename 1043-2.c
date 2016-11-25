@@ -2,17 +2,13 @@
 #include<stdio.h>
 
 int main (){
-
-    char a[1000] = " ";
-    int n[6];
+    char a[10000];
+    int n[6] = {0, 0, 0, 0, 0, 0};
     int i ;
     int max ;
 
     scanf("%s",a);
     
-    for ( i = 0 ; i< 6 ;i++)
-        n[i] = 0 ;
-
     for ( i = 0 ; a[i] != '\0' ; i++){
         
             switch ( a[i]) {
@@ -71,6 +67,4 @@ int main (){
     }
 
     return 0 ;
-
 }
-

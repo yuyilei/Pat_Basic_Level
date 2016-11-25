@@ -4,7 +4,7 @@
 
 int main (){
 
-    char a[1000] = " ";
+    char a[10000];
     int n[6];
     int i ;
 
@@ -39,12 +39,14 @@ int main (){
             case 4 : printf("s");  break ;
             case 5 : printf("t");  break ;         
         }
-        n[i] = n[i] -1 ;
+        n[i]--;
 
     }
 
-    if ( (i == 5 ) && ( n[0] > 0 || n[1] > 0 || n[2] > 0 || n[3] > 0 || n[4] > 0 || n[5] > 0 ) )
-               i = 0 ; 
+    if( i == 5) {
+       if ((n[0] > 0) || (n[1] > 0) || (n[2] > 0) || (n[3] > 0) || (n[4] > 0) || (n[5] > 0 ))
+               i = -1 ; 
+     } 
    
    }
     return 0 ;

@@ -26,7 +26,7 @@ int main (){
         k2 = k1 - k2 ;
         k1 = k1 - k2 ;
     }
-    else if ( g1 == g2 , s1 > s2 ){
+    else if ( g1 == g2 && s1 > s2 ){
         printf("-");
         s1 = s1 + s2 ;
         s2 = s1 - s2 ;
@@ -35,7 +35,7 @@ int main (){
         k2 = k1 - k2 ;
         k1 = k1 - k2 ;
     }
-    else if (g1 == g2 , s1 ==s2 , k1 > k2){
+    else if (g1 == g2 && s1 ==s2 && k1 > k2){
         printf("-");
         k1 = k1 + k2 ;
         k2 = k1 - k2 ;
