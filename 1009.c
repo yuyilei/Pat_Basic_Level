@@ -27,7 +27,7 @@ int main(){
        if ( a[j] == ' ')
            n[t] = j ;
    }
-  
+//    printf("%d",n[t]) ;  
     j = 0 ; 
     for ( i = strlen(a) ; i >= 0 ; i--){
         if ( a[i] == ' ' && n[j] > 0){
@@ -47,7 +47,7 @@ int main(){
             }
                j++ ;
          }
-            else if ( j > 0 && n[j] == 0 ){
+            else  if ( j == n[t]){
                    
                 for ( k = 0 ; k <= n[t] ;  k++) {
                     printf("%c",a[k]) ;
