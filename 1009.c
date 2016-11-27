@@ -22,10 +22,12 @@ int main(){
     }
 
      t = j ;
-   for ( j = 0 ; n[t] != j-1 ; j++) {
+
+   for ( j = 0 ; n[t] == 0 ; j++) {
        if ( a[j] == ' ')
-           n[t] = j;
-   } 
+           n[t] = j ;
+   }
+  
     j = 0 ; 
     for ( i = strlen(a) ; i >= 0 ; i--){
         if ( a[i] == ' ' && n[j] > 0){
@@ -38,22 +40,21 @@ int main(){
                     printf(" ") ;
 
             }
-            else if ( j > 0 && n[j + 1] > 0 ){
-              for ( k = i + 1; k <= n[j] ; k++){
-                printf("%c",a[k]) ;
+            else if ( j > 0 && n[j+1] > 0 ){
+               
+                for ( k = i + 1; k <= n[j] ; k++){
+                    printf("%c",a[k]) ;
             }
                j++ ;
          }
-            else if ( j > 0 && n[j + 1] == 0){
-            
-                for ( k = 0 ; k <= n[j] ;  k++) {
-                
+            else if ( j > 0 && n[j] == 0 ){
+                   
+                for ( k = 0 ; k <= n[t] ;  k++) {
                     printf("%c",a[k]) ;
-                }
-                j++ ;
-            }
+             }
+                   j++ ;
+          }
        } 
     }
-
-    return 0 ;
+   return 0 ;
 }
