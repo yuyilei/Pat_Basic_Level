@@ -4,11 +4,14 @@
 
 int main (){
 
-    char a[1000] = " ";
+    char a[10000];
     int n[6];
     int i ;
 
     scanf("%s",a);
+    
+    for ( i = 0 ; i< 6 ;i++)
+        n[i] = 0 ;
 
     for ( i = 0 ; a[i] != '\0' ; i++){
     
@@ -24,6 +27,8 @@ int main (){
     }
 
     for (  i = 0 ; i < 6 ; i++ ) {
+       
+    if (  n[i] > 0){
     
         switch ( i) {
         
@@ -34,10 +39,16 @@ int main (){
             case 4 : printf("s");  break ;
             case 5 : printf("t");  break ;         
         }
-        n[i] = n[i] -1 ;
-            if ( i == 5 ,  a[0] != '\0' || a[1] != '\0' || a[2] != '\0' || a[3] != '\0' || a[4] != '\0' || a[5] != '\0' )
-                i = 0 ; 
+        n[i]--;
+
     }
+
+    if( i == 5) {
+       if ((n[0] > 0) || (n[1] > 0) || (n[2] > 0) || (n[3] > 0) || (n[4] > 0) || (n[5] > 0 ))
+               i = -1 ; 
+     } 
+   
+   }
     return 0 ;
 
 }
