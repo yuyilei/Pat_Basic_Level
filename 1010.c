@@ -14,6 +14,13 @@ int main(){
      //   printf("%d",n[i]) ;
     len = i ;
    //  printf("%d",len) ;
+    
+    if ( len == 1 && n[1] == 0)
+        printf("0 0") ;
+
+    else if (len == 1 && n[1] != 0)
+        printf("%d %d",n[0]*n[1] ,n[1] - 1) ;
+    else if ( len > 1){
     for ( i = 0 ;  i <= len -3 ; i = i + 2){
         if ( n[i+1] !=0 && i < len - 3 )
         printf("%d %d ",n[i]*n[i+1],n[i+1]-1) ;
@@ -26,7 +33,7 @@ int main(){
     }
     if ( n[len] != 0 )
     printf("%d %d",n[len -1]*n[len],n[len] - 1) ;
-
+  }
     return 0 ;
     
 }
