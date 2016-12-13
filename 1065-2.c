@@ -61,7 +61,7 @@ int main(){
     for ( i = 0 ; i < t - 1 ; i++)
         printf("%ld ",mark[i]) ;
 
-    printf("%ld",mark[t]) ;
+    printf("%ld",mark[t-1]) ;
 
     return 0 ;
 
