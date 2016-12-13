@@ -57,12 +57,16 @@ int main(){
 
     qsort(mark, t ,sizeof(long) , comp) ;
 
+    if ( t == 0 )
+        printf("0") ;
+    else {
     printf("%ld\n",t) ;
     for ( i = 0 ; i < t - 1 ; i++)
         printf("%ld ",mark[i]) ;
 
     printf("%ld",mark[t-1]) ;
-
+ 
+    }
     return 0 ;
 
 
