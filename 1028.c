@@ -30,7 +30,7 @@ int main(){
         
             if ( m > 10)
                 number ++ ;
-            if ( m == 9 && d >= 6)
+            else if ( m == 9 && d >= 6)
                 number ++ ;
             else
                 y = 0 ;
@@ -39,7 +39,7 @@ int main(){
         
             if ( m < 9)
                 number++ ;
-            if ( m== 9 && d <= 6)
+            else if ( m== 9 && d <= 6)
                 number++ ;
             else 
                 y = 0 ; 
@@ -103,7 +103,10 @@ int main(){
         
         
     }
-    if ( old != -1 && young != -1 )
+ //    if ( old != -1 && young != -1 )
+    if ( number ==0 )
+        printf("0") ;
+    else
     printf("%ld %s %s",number,name[old],name[young]) ;
     
     return 0; 
