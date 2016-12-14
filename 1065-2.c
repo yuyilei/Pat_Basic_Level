@@ -19,7 +19,13 @@ int main(){
     long  s[99999] ={0} ;
 
     scanf("%ld",&n) ;
+
+/*    for ( i = 0 ; i < 99999 ; i++){
     
+        a[i] = -2 ;
+        b[i] = -2 ;
+    }
+  */  
     for ( i = 0 ; i < n ; i++){
     
         scanf("%ld %ld",&x,&y) ;
@@ -32,6 +38,7 @@ int main(){
     for ( i = 0 ; i < m ; i++){
     
         scanf("%ld",&c[i]) ;
+//        printf("%ld",c[i]) ;
         if ( a[c[i]] != 0 )
             s[c[i]] = -1 ;
 
@@ -58,13 +65,13 @@ int main(){
     qsort(mark, t ,sizeof(long) , comp) ;
 
     if ( t == 0 )
-        printf("0") ;
+        printf("0\n") ;
     else {
     printf("%ld\n",t) ;
     for ( i = 0 ; i < t - 1 ; i++)
-        printf("%ld ",mark[i]) ;
+        printf("%05ld ",mark[i]) ;
 
-    printf("%ld",mark[t-1]) ;
+    printf("%05ld",mark[t-1]) ;
  
     }
     return 0 ;
