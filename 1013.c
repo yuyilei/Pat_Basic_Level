@@ -17,11 +17,13 @@ int main(){
     int n ;
     long d = 3 ;
     long a[10000] = {0} ;
-    int i=0 ; 
+    int i= 0 ; 
     int j ;
 
+ //   printf("2") ;
     scanf("%d %d",&m,&n);
  //   printf("%d %d",m,n) ; 
+  //  printf("1") ; 
     while(i < n && d % 2 != 0){
     
         if(i > m && prime(d)==1){
