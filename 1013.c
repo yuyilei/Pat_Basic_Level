@@ -17,28 +17,36 @@ int main(){
     int n ;
     long d = 3 ;
     long a[10000] = {0} ;
-    int i= 0 ; 
     int j ;
-
+    int t = 0 ;
+    long res[10000] = {0} ;
+    
  //   printf("2") ;
     scanf("%d %d",&m,&n);
- //   printf("%d %d",m,n) ; 
+//   printf("%d %d",m,n) ; 
   //  printf("1") ; 
-    while(i < n && d % 2 != 0){
+   while(t < n && d % 2 != 0){
     
-        if(i > m && prime(d)==1){
+        if( prime(d)==1){
         
-            a[i++] = d ;
+            a[t++] = d ;
         }
-     d += 2 ;
+     d = d + 2 ;
     }
 
-    for(j = 0 ; j < n - m ; j++){
+    if(m==1){
     
-        if (j != 0 && j % 10 == 0)
+        a[m-2] = 2 ;
+    }    
+
+    for(j =m-2; j < n - 2 ; j++){
+        
+        if ( (j-m+3) % 10 == 0)
             printf("%ld\n",a[j]) ; 
         else 
             printf("%ld ",a[j]) ;
     }
+    printf("%ld",a[n-2]) ; 
+    
     return 0 ; 
 }
