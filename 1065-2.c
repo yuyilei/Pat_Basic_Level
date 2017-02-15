@@ -7,16 +7,16 @@ int comp(const void*a,const void*b){
 int main(){
 
     long  n  ;
-    long  a[99999] = {0} ;
-    long  b[99999] = {0} ;
-    long  c[10000] = {0} ;
+    long  a[100000] = {0} ;
+    long  b[100000] = {0} ;
+    long  c[10001] = {0} ;
     long  i ;
     long  m ;
     long  x;
     long  y ;
-    long  mark[99999] = {0} ;
+    long  mark[100000] = {0} ;
     long  t = 0 ;
-    long  s[99999] ={0} ;
+    long  s[100000] ={0} ;
 
     scanf("%ld",&n) ;
 
@@ -25,7 +25,12 @@ int main(){
         a[i] = -2 ;
         b[i] = -2 ;
     }
-  */  
+  */ 
+    for (i=0;i<=100000;i++){ 
+       a[i] = -2 ;
+       b[i] = -2 ;
+    }
+
     for ( i = 0 ; i < n ; i++){
     
         scanf("%ld %ld",&x,&y) ;
@@ -39,23 +44,23 @@ int main(){
     
         scanf("%ld",&c[i]) ;
 //        printf("%ld",c[i]) ;
-        if ( a[c[i]] != 0 )
+        if ( a[c[i]] != -2 )
             s[c[i]] = -1 ;
 
-        if ( b[c[i]] != 0 )
+        if ( b[c[i]] != -2 )
             s[c[i]] = -1 ;
 
-        if ( b[c[i]] == 0 && a[c[i]] == 0 )
+        if ( b[c[i]] == -2 && a[c[i]] == -2 )
             mark[t++] = c[i] ;
     }
          
          
     for ( i = 0 ; i < n ; i++){
     
-        if ( s[a[c[i]]] != s[c[i]] && a[c[i]] != 0 )
+        if ( s[a[c[i]]] != s[c[i]] && a[c[i]] != -2 )
             mark[t++] = c[i] ;
 
-        if ( s[b[c[i]]] != s[c[i]] && b[c[i]] != 0 )
+        if ( s[b[c[i]]] != s[c[i]] && b[c[i]] != -2 )
             mark[t++] = c[i] ;
     }
    
