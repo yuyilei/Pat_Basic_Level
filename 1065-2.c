@@ -36,11 +36,14 @@ int main(){
         scanf("%ld %ld",&x,&y) ;
         a[x] = y ;
         b[y] = x ;
+ //       printf("%ld %ld\n",x,y) ; 
     }
+//    printf("%ld %ld\n",a[n-1],b[n-1]) ;
+
 
     scanf("%ld",&m) ;
 //    printf("%ld",m) ;
-    for ( i = 0 ; i < m ; i++){
+    for ( i = 0 ; i < m; i++){
     
         scanf("%ld",&c[i]) ;
 //        printf("%ld",c[i]) ;
@@ -55,7 +58,7 @@ int main(){
     }
          
          
-    for ( i = 0 ; i < n ; i++){
+    for ( i = 0 ; i < m ; i++){
     
         if ( s[a[c[i]]] != s[c[i]] && a[c[i]] != -2 )
             mark[t++] = c[i] ;
@@ -73,13 +76,12 @@ int main(){
         printf("0\n") ;
     else {
     printf("%ld\n",t) ;
-    for ( i = 0 ; i < t - 1 ; i++)
+    for ( i = 0 ; i < t - 1; i++)
         printf("%05ld ",mark[i]) ;
 
-    printf("%05ld",mark[t-1]) ;
+    printf("%05ld",mark[t - 1]) ;
  
     }
     return 0 ;
-
 
 }
