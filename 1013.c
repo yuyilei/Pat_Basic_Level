@@ -18,14 +18,11 @@ int main(){
     long d = 3 ;
     long a[10000] = {0} ;
     int j ;
-    int t = 0 ;
-    long res[10000] = {0} ;
+    int t = 1 ;
     
- //   printf("2") ;
     scanf("%d %d",&m,&n);
-//   printf("%d %d",m,n) ; 
-  //  printf("1") ; 
-   while(t < n && d % 2 != 0){
+
+    while(t < n ){
     
         if( prime(d)==1){
         
@@ -33,20 +30,17 @@ int main(){
         }
      d = d + 2 ;
     }
-
-    if(m==1){
-    
-        a[m-2] = 2 ;
-    }    
-
-    for(j =m-2; j < n - 2 ; j++){
+     
+    a[0] = 2 ;     
+     
+    for(j = m - 1; j < n - 1 ; j++){
         
-        if ( (j-m+3) % 10 == 0)
+        if ( (j-m+2) % 10 == 0)
             printf("%ld\n",a[j]) ; 
         else 
             printf("%ld ",a[j]) ;
     }
-    printf("%ld",a[n-2]) ; 
+    printf("%ld",a[n-1]) ; 
     
     return 0 ; 
 }
