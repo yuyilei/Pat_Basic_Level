@@ -20,10 +20,10 @@ int main() {
            }
     }
 
-    printf("1") ; 
+//    printf("1") ; 
     for ( i = 0 ; i < number ; i++) {
         scanf("%d",&a[i]) ;
-        printf("%d ",a[i]) ;
+//        printf("%d ",a[i]) ;
     }
 
     for ( i = 0 ; i < number - 1 ; i++){
@@ -38,12 +38,19 @@ int main() {
             }
         }
     }
+  /*   
+    printf("\n") ; 
+    for ( i = 0 ; i < number ; i++) 
+        printf("%d ", a[i]) ; 
 
+ */
     int b[m][n] ; 
 
     for ( i = 0 ; i < m ;i++)
-        for ( j = 0 ; j < n ; j++)
+        for ( j = 0 ; j < n ; j++){
             b[i][j] = 0 ;
+//            printf("%d ",b[i][j]) ; 
+            }
 
     t = 0 ;
     
@@ -55,7 +62,7 @@ int main() {
     
         for ( ; j < n ; j++ ){
         
-            if (b[i][j] != 0) {
+            if (b[i][j] == 0) {
             
                 b[i][j] = a[t++] ;
             }
@@ -71,7 +78,7 @@ int main() {
 
         for ( ; i < m ; i++ ){
         
-            if(b[i][j] != 0) {
+            if(b[i][j] == 0) {
             
                 b[i][j] = a[t++] ;
             }
@@ -87,7 +94,7 @@ int main() {
 
         for ( ; j >= 0 ; j--){
         
-            if (b[i][j] != 0) {
+            if (b[i][j] == 0) {
             
                 b[i][j] = a[t++] ;
             }
@@ -103,7 +110,7 @@ int main() {
 
         for ( ; i >= 0 ; i--) {
         
-            if (b[i][j] != 0) {
+            if (b[i][j] == 0) {
             
                 b[i][j] = a[t++] ;
             }
@@ -132,7 +139,6 @@ int main() {
     }
     
 
-    printf("%d %d",m,n) ; 
     return 0 ; 
 }
 
