@@ -1,7 +1,5 @@
 #include<stdio.h>
-#include<math.h>
 #include<stdlib.h>
-
 
 int tell( long long c[][10000] , long long tol , int a , int b ){
     
@@ -14,7 +12,7 @@ int tell( long long c[][10000] , long long tol , int a , int b ){
     else 
         flag = -1 ;
 
-        for ( ; i <= a + 1 ; i++ ) {
+        for ( i = a ; i <= a + 1 ; i++ ) {
         
             if ( flag*(c[a][b] - c[i][j] ) <= tol  ) {
             
@@ -84,16 +82,16 @@ int main () {
     int flag1 = 0 ;
     int flag2 = 0 ;
 
-    for ( i = 1 ; i < m -1 ; i++ ){
+    for ( i = 1 ; i < m - 1 ; i++ ){
     
-        for ( j = 1 ; j < n -1 ; j++ ) {
+        for ( j = 1 ; j < n - 1 ; j++ ) {
         
             int temp = tell(a,tol,i,j) ;
 
             if ( flag1 == 1 && temp == 1) {
-            
-                flag2 = 1 ;
-                break ;
+           
+               printf("Not Unique\n") ;
+               return 0 ;
             }
             
             if ( flag1 == 0 && temp == 1 ){
@@ -103,7 +101,10 @@ int main () {
                 y = i + 1 ;
                 res = a[i][j] ;
           }
-
+            
+ /*            if ( temp == 0 ) 
+                printf("%d,%d,%lld\n" ,j+1,i+1, a[i][j]) ;
+*/
        }
         if ( flag2 == 1)
             break ;
@@ -111,8 +112,6 @@ int main () {
 
     if ( flag1 == 0) 
         printf("Not Exist\n") ;
-    else if (flag2 == 1)
-        printf("Not Unique\n") ;
     else 
         printf("(%d, %d): %lld",x,y,res) ;
 
