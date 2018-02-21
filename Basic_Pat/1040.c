@@ -4,44 +4,18 @@
 int main(){
 
     char n[100000]  ;
-    long i ;
-    long j = 0  ;
-    long k = 0  ;
-    long s = 0  ;
-    long q = 0  ;
-    long p[10000] = {0 };
-    long a[10000] = {0 };
-    long t[10000] = {0 };
-    long len ;
-    long d = 1 ;
-    long m = 1 ;
-    long long sum = 0;
-
+    int T = 0, AT = 0, PAT = 0, i ; 
     scanf("%s",n) ;
-
-    len = strlen(n) ;
-    for ( i = 0 ; i < len ; i++ ){
-     
-        if ( n[i] == 'P')
-            p[j++] = i ;
-        else if  ( n[i] == 'A')
-            a[k++] = i ;
+    int len = strlen(n) ;
+    for ( i = len - 1 ; i >= 0 ; i-- ) {
+        if ( n[i] == 'T' ) 
+            T++ ;                                     // 遇到T，加一  
+        else if ( n[i] == 'A' ) 
+            AT = ( AT + T ) % 1000000007 ;            // 遇到A，AT的个数就是AT+T
         else 
-            t[s++] = i ;
-    }
-
-    for ( i = p[0] ; i <= p[j -1] ; i = p[d++] )
-        for ( q = i ; q <=a[k -1] ;   )
-            if ( n[q] == 'A') {
-                sum = sum + s -   ; 
-                
-              }
-             else{
-             
-                 q++ ;
-             } 
-
-   printf("%lld",sum % 1000000007) ;
-  return 0 ; 
+            PAT = ( PAT + AT ) % 1000000007 ;         // 遇到P， PAT的个数就是PAT+AT 
+    } 
+    printf("%d\n",PAT) ; 
+    return 0 ; 
           
 } 
